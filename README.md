@@ -14,7 +14,7 @@ The checking of SCTs included in the [RFC 6962](http://tools.ietf.org/html/rfc69
  - [CMake](http://www.cmake.org/)
  - [googletest](https://code.google.com/p/googletest/) (tested with 1.6.0)
 
-Unpack googletest, but do not build it. Upstream recommends to build a new copy from source for each package to be tested. We follow this advice in our ```Makefile```, which builds gtest automatically.
+Unpack googletest, but do not build it. [Upstream recommends](https://code.google.com/p/googletest/wiki/FAQ#Why_is_it_not_recommended_to_install_a_pre-compiled_copy_of_Goog) to build a new copy from source for each package to be tested. We follow this advice in our ```Makefile```, which builds gtest automatically.
 
 Some systems make the googletest source available as a package; on Debian, this is in the libgtest-dev package, which puts it in ```/usr/src/gtest```. Our ```Makefile``` looks in that location by default, but if your googletest sources are in a different location, set the ```GTESTDIR``` environment variable to point at them.
 
